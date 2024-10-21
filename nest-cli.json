@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/express/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/express/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/express",
+  "projects": {
+    "express": {
+      "type": "application",
+      "root": "apps/express",
+      "entryFile": "main",
+      "sourceRoot": "apps/express/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/express/tsconfig.app.json"
+      }
+    },
+    "fastify": {
+      "type": "application",
+      "root": "apps/fastify",
+      "entryFile": "main",
+      "sourceRoot": "apps/fastify/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/fastify/tsconfig.app.json"
+      }
+    }
+  }
+}
